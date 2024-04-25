@@ -42,16 +42,16 @@
     <div class="comprovantes">
         <div class="datosBoleta comprovante">
             <div class="form-floating my-1">
-                <input type="text" class="form-control DNI_CE" id="form_solonum" placeholder="DNI / CE" maxlength="8" minlength="8" require>
+                <input type="text" class="form-control DNI_CE" id="floatingInput" placeholder="DNI / CE" data-acepta-numeros="true" maxlength="8" minlength="8" require>
                 <label for="floatingInput">DNI / CE</label>
             </div>
             
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solotext" placeholder="NOMBRE COMPLETO" minlength="3" require>
+                <input type="text" class="form-control" id="floatingInput" placeholder="NOMBRE COMPLETO" data-acepta-letras="true" minlength="3" require>
                 <label for="floatingInput">NOMBRE COMPLETO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solonum" placeholder="TELÉFONO PARA SU ENTREGA" maxlength="9" minlength="8" require>
+                <input type="text" class="form-control" id="floatingInput" placeholder="TELÉFONO PARA SU ENTREGA" data-acepta-numeros="true" maxlength="9" minlength="8" require>
                 <label for="floatingInput">TELÉFONO PARA SU ENTREGA</label>
             </div>
             <div class="form-floating my-1">
@@ -59,7 +59,7 @@
                 <label for="floatingInput">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="password" class="form-control" id="form_solonum" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4" require>
+                <input type="password" class="form-control" id="floatingInput" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" data-acepta-numeros="true" maxlength="4" minlength="4" require>
                 <label for="floatingInput">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
             </div>
 
@@ -69,15 +69,15 @@
 
             <div class="datosTercero" style="display: none;">
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="form_solonum" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8" require>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="DNI / CE TERCERO" data-acepta-numeros="true" maxlength="8" minlength="8" require>
                     <label for="floatingInput">DNI / CE TERCERO</label>
                 </div>
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="form_solotext" placeholder="NOMBRE COMPLETO TERCERO" minlength="3" require>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="NOMBRE COMPLETO TERCERO" data-acepta-letras="true" minlength="3" require>
                     <label for="floatingInput">NOMBRE COMPLETO TERCERO</label>
                 </div>
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="form_solonum" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9" require>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" data-acepta-numeros="true" maxlength="9" minlength="9" require>
                     <label for="floatingInput">TELÉFONO PARA SU ENTREGA TERCERO</label>
                 </div>
             </div>
@@ -85,7 +85,7 @@
 
         <div class="datosFactura comprovante">
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solonum" placeholder="RUC" maxlength="11">
+                <input type="text" class="form-control" id="floatingInput" placeholder="RUC" maxlength="11">
                 <label for="floatingInput">RUC</label>
             </div>
             <div class="form-floating my-1">
@@ -97,19 +97,19 @@
                 <label for="floatingInput">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solonum" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4">
+                <input type="text" class="form-control" id="floatingInput" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4">
                 <label for="floatingInput">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solonum" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8">
+                <input type="text" class="form-control" id="floatingInput" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8">
                 <label for="floatingInput">DNI / CE TERCERO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solotext" placeholder="NOMBRE COMPLETO TERCERO" minlength="3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="NOMBRE COMPLETO TERCERO" minlength="3">
                 <label for="floatingInput">NOMBRE COMPLETO TERCERO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="form_solonum" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9">
+                <input type="text" class="form-control" id="floatingInput" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9">
                 <label for="floatingInput">TELÉFONO PARA SU ENTREGA TERCERO</label>
             </div>
         </div>
@@ -399,7 +399,15 @@
         } else {
             $(".datosTipoMoneda").hide();
         }
+        $("input[required]").trigger("change");
     });
+});
+$(document).ready(function() {
+    // Agregar clase a campos que aceptan solo números
+    $("input[type='text'][data-acepta-numeros='true']").addClass("soloNumeros");
+
+    // Agregar clase a campos que aceptan solo letras
+    $("input[type='text'][data-acepta-letras='true']").addClass("soloLetras");
 });
      
 </script>
