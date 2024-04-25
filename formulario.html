@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"
+    ></script>
+    <title>Gallery</title>
+
+    <style>
+        .colorBordesAzul{
+            border: 3px solid blue;
+            color: blue;
+        }
+        .activeFormCompra{
+            background: blue;
+            color: white;
+        }
+     
+    </style>
+  </head>
+
+  <body>
+    
+    <p>Por su compra, ¿Desea boleta o factura?</p>
+    <div class="d-flex w-100 px-5">
+        <div class="colorBordesAzul mx-auto px-5 rounded btnComprobantes activeFormCompra" id="btnBoleta"><b>BOLETA</b></div>
+        <div class="colorBordesAzul mx-auto px-5 rounded btnComprobantes" id="btnFactura"><b>FACTURA</b></div>
+    </div>
+    <div class="comprovantes">
+        <div class="datosBoleta comprovante">
+            <div class="form-floating my-1">
+                <input type="text" class="form-control DNI_CE" id="form_solonum" placeholder="DNI / CE" maxlength="8" minlength="8" require>
+                <label for="floatingInput">DNI / CE</label>
+            </div>
+            
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solotext" placeholder="NOMBRE COMPLETO" minlength="3" require>
+                <label for="floatingInput">NOMBRE COMPLETO</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solonum" placeholder="TELÉFONO PARA SU ENTREGA" maxlength="9" minlength="8" require>
+                <label for="floatingInput">TELÉFONO PARA SU ENTREGA</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO" require>
+                <label for="floatingInput">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="password" class="form-control" id="form_solonum" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4" require>
+                <label for="floatingInput">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
+            </div>
+
+            <label class="checkbox-inline">
+                <input type="checkbox" name="tipo" id="checkboxTercero"> Asignar a un tercero para la entrega
+            </label>
+
+            <div class="datosTercero" style="display: none;">
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="form_solonum" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8" require>
+                    <label for="floatingInput">DNI / CE TERCERO</label>
+                </div>
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="form_solotext" placeholder="NOMBRE COMPLETO TERCERO" minlength="3" require>
+                    <label for="floatingInput">NOMBRE COMPLETO TERCERO</label>
+                </div>
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="form_solonum" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9" require>
+                    <label for="floatingInput">TELÉFONO PARA SU ENTREGA TERCERO</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="datosFactura comprovante">
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solonum" placeholder="RUC" maxlength="11">
+                <label for="floatingInput">RUC</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="floatingInput" placeholder="RAZÓN SOCIAL" minlength="3">
+                <label for="floatingInput">RAZÓN SOCIAL</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO">
+                <label for="floatingInput">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solonum" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4">
+                <label for="floatingInput">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solonum" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8">
+                <label for="floatingInput">DNI / CE TERCERO</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solotext" placeholder="NOMBRE COMPLETO TERCERO" minlength="3">
+                <label for="floatingInput">NOMBRE COMPLETO TERCERO</label>
+            </div>
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="form_solonum" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9">
+                <label for="floatingInput">TELÉFONO PARA SU ENTREGA TERCERO</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="datosEnvioProducto" style="display: none;">
+    
+        <div class="d-flex">
+            <div class="colorBordesAzul mx-auto px-5 btn activeFormCompra" id="btnRecojDirec">RECOJO EN DIRECCIÓN</div>
+            <div class="colorBordesAzul mx-auto px-5 btn" id="btnDelLima">DELIVERY LIMA</div>
+            <div class="colorBordesAzul mx-auto px-5 btn" id="btnEnvProvin">ENVÍO A PROVINCIA</div>
+        </div>
+        <div class="obsionRecojoProd">
+            <div class="recojoTienda">
+                <p>mapa de la direccion</p>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="AceptarDireccion" id="AceptarDireccion"> Aceptar Direccion 
+                </label>
+            </div>
+            <div class="deliveryLima">
+                <p>Dirección de Entrega</p>
+                <div class="form-floating my-1">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>DISTRITO</option>
+                    <option value="SAN ISIDRO">SAN ISIDRO</option>
+                    <option value="MIRAFLORES">MIRAFLORES</option>
+                    <option value="BARRANCO">BARRANCO</option>
+                    <option value="SANTIAGO DE SURCO (SURCO)">SANTIAGO DE SURCO (SURCO)</option>
+                    <option value="SAN BORJA">SAN BORJA</option>
+                    <option value="SAN LUIS">SAN LUIS</option>
+                    <option value="JESÚS MARÍA">JESÚS MARÍA</option>
+                    <option value="MAGDALENA DEL MAR">MAGDALENA DEL MAR</option>
+                    <option value="LA MOLINA">LA MOLINA</option>
+                    <option value="LINCE">LINCE</option>
+                    <option value="PUEBLO LIBRE">PUEBLO LIBRE</option>
+                    <option value="SAN MIGUEL">SAN MIGUEL</option>
+                    <option value="BREÑA">BREÑA</option>
+                    <option value="LA VICTORIA">LA VICTORIA</option>
+                    <option value="RÍMAC">RÍMAC</option>
+                    <option value="CHORRILLOS">CHORRILLOS</option>
+                    <option value="VILLA MARÍA DEL TRIUNFO">VILLA MARÍA DEL TRIUNFO</option>
+                    <option value="VILLA EL SALVADOR">VILLA EL SALVADOR</option>
+                    <option value="SAN JUAN DE MIRAFLORES">SAN JUAN DE MIRAFLORES</option>
+                    <option value="ATE">ATE</option>
+                    <option value="SANTA ANITA">SANTA ANITA</option>
+                    <option value="CALLAO">CALLAO</option>
+                    </select>
+                    <label for="floatingSelect">SELECCIONAR DISTRITO DE LIMA</label>
+                </div>
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="DIGITE SU DIRECCIÓN DE ENTREGA">
+                    <label for="floatingInput">DIGITE SU DIRECCIÓN DE ENTREGA</label>
+                </div>
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="REFERENCIA DEL LUGAR DE ENTREGA">
+                    <label for="floatingInput">REFERENCIA DEL LUGAR DE ENTREGA</label>
+                </div>
+            </div>
+            <div class="emvioProvincia">
+                <p>Dirección de Envío</p>
+                <div class="form-floating my-1">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>DEPARTAMENTOS</option>
+                    <label for="floatingSelect">SELECCIONAR DEPARTAMENTO</label>
+                </div>
+                <div class="form-floating my-1">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>SELECCIONAR PROVINCIA</option>
+                    <label for="floatingSelect">SELECCIONAR PROVINCIA</label>
+                </div>
+                <div class="form-floating my-1">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>SELECCIONAR DISTRITO</option>
+                    <label for="floatingSelect">SELECCIONAR DISTRITO</label>
+                </div>
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="DIGITE SU DIRECCIÓN DE ENTREGA">
+                    <label for="floatingInput">DIGITE SU DIRECCIÓN DE ENTREGA</label>
+                </div>
+                <div class="form-floating my-1">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="REFERENCIA DEL LUGAR DE ENTREGA">
+                    <label for="floatingInput">REFERENCIA DEL LUGAR DE ENTREGA</label>
+                </div>
+                <p>Seleccionar su agencia de envío</p>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="tipo" id="ajencia"> ajencia
+                </label>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="datosTipoMoneda" style="display: none;">
+        <p>Tipo de Moneda:</p>
+        <div class="d-flex">
+            <div class="colorBordesAzul mx-auto px-5 btn activeFormCompra">SOLES (S/)</div>
+            <div class="colorBordesAzul mx-auto px-5 btn">DÓLARES ($)</div>
+        </div>
+        <p>Método de Pago:</p>
+        <div class="form-floating my-1">
+            <input type="text" class="form-control" id="form_solonum" placeholder="N° de Tarjeta">
+            <label for="floatingInput">N° de Tarjeta</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="date" class="form-control" id="form_solonum" placeholder="MM/YY">
+            <label for="floatingInput">MM/YY</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="text" class="form-control" id="form_solonum" placeholder="CVV">
+            <label for="floatingInput">CVV</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="text" class="form-control" id="floatingInput" placeholder="pago unico">
+            <label for="floatingInput">single payment</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Pago sin aplazamiento">
+            <label for="floatingInput">Pago sin aplazamiento</label>
+        </div>
+        <button class="colorBackgroundAzulHover mx-auto px-5 btn">pagar S/ $cantidad</button>
+    </div>
+</form>
+
+
+<script>
+  $(document).ready(function() {
+    $(".datosFactura").hide();
+    $(".datosTercero").hide();
+    $(".datosEnvioProducto").hide();
+    $(".deliveryLima").hide();
+    $(".emvioProvincia").hide();
+    $(".datosTipoMoneda").hide();
+
+    $("#btnBoleta").click(function() {
+        $("#btnBoleta").addClass("activeFormCompra")
+        $("#btnFactura").removeClass("activeFormCompra")
+
+        $(".datosBoleta").show();
+        $(".datosFactura").hide();
+        $(".datosEnvioProducto").hide(); 
+
+        $(".datosBoleta input").attr("required", true);
+        $(".datosFactura input").attr("required", false);
+        $(".datosTercero input").attr("required", false); 
+    });
+
+    $("#btnFactura").click(function() {
+        $("#btnFactura").addClass("activeFormCompra")
+        $("#btnBoleta").removeClass("activeFormCompra")
+
+        $(".datosBoleta").hide();
+        $(".datosFactura").show();
+        $(".datosEnvioProducto").hide(); 
+
+        $(".datosFactura input").attr("required", true);
+        $(".datosBoleta input").attr("required", false);
+        $(".datosTercero input").attr("required", false); 
+    });
+
+    $("#checkboxTercero").change(function() {
+        if ($(this).is(':checked')) {
+            $(".datosTercero").show();
+            $(".datosTercero input").attr("required", true); 
+        } else {
+            $(".datosTercero").hide();
+            $(".datosTercero input").attr("required", false); 
+        }
+    });
+
+    function allRequiredFilled() {
+        var allFilled = true;
+
+        var currentSection = $(".datosBoleta").is(":visible") ? ".datosBoleta" : ".datosFactura";
+        $(currentSection + " input[required]").each(function() {
+            if ($(this).val() === "") {
+                allFilled = false;
+                return false; 
+            }
+        });
+
+        if ($("#checkboxTercero").is(':checked')) {
+            $(".datosTercero input[required]").each(function() {
+                if ($(this).val() === "") {
+                    allFilled = false;
+                    return false; 
+                }
+            });
+        }
+
+        return allFilled;
+    }
+    $(document).on("change keyup", "input[required]", function() {
+        if (allRequiredFilled()) {
+            $(".datosEnvioProducto").show(); 
+        } else {
+            $(".datosEnvioProducto").hide(); 
+        }
+    });
+
+
+    
+
+    $("#btnRecojDirec").click(function() {
+        $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
+        $(this).addClass("activeFormCompra");
+        $(".datosTipoMoneda").hide();
+
+        $(".datosEnvioProducto .obsionRecojoProd > div").hide();
+        $(".datosEnvioProducto .recojoTienda").show(); 
+
+        $(".recojoTienda input").attr("required", true);
+        $(".deliveryLima input").attr("required", false);
+        $(".emvioProvincia input").attr("required", false); 
+    });
+    $("#btnDelLima").click(function() {
+        $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
+        $(this).addClass("activeFormCompra");
+        $(".datosTipoMoneda").hide();
+
+        $(".datosEnvioProducto .obsionRecojoProd > div").hide();
+        $(".datosEnvioProducto .deliveryLima").show(); 
+
+        $(".deliveryLima input").attr("required", true);
+        $(".emvioProvincia input").attr("required", false);
+        $(".recojoTienda input").attr("required", false); 
+    });
+    $("#btnEnvProvin").click(function() {
+        $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
+        $(this).addClass("activeFormCompra");
+        $(".datosTipoMoneda").hide();
+
+        $(".datosEnvioProducto .obsionRecojoProd > div").hide();
+        $(".datosEnvioProducto .emvioProvincia").show(); 
+
+        $(".emvioProvincia input").attr("required", true);
+        $(".deliveryLima input").attr("required", false);
+        $(".recojoTienda input").attr("required", false); 
+    });
+
+    function allRequiredFilled2(){
+        var allFilled = true;
+
+        var currentSection = $(".datosEnvioProducto .btn.activeFormCompra").attr("id");
+        switch (currentSection) {
+            case "btnRecojDirec":
+                $(currentSection + " ~ .recojoTienda input[required]").each(function() {
+                    if ($(this).val() === "") {
+                        allFilled = false;
+                        return false;
+                    }
+                });
+                if (!$("#AceptarDireccion").is(':checked')) {
+                    allFilled = false;
+                }
+                break;
+            case "btnDelLima":
+                $(currentSection + " ~ .deliveryLima input[required]").each(function() {
+                    if ($(this).val() === "") {
+                        allFilled = false;
+                        return false; 
+                    }
+                });
+                break;
+            case "btnEnvProvin":
+                $(currentSection + " ~ .emvioProvincia input[required]").each(function() {
+                    if ($(this).val() === "") {
+                        allFilled = false;
+                        return false; 
+                    }
+                });
+                break;
+        }
+        if ($("#checkboxTercero").is(':checked')) {
+            $(".datosTercero input[required]").each(function() {
+                if ($(this).val() === "") {
+                    allFilled = false;
+                    return false; 
+                }
+            });
+        }
+        
+        return allFilled;
+    }
+    $(document).on("change keyup", "input[required]", function() {
+        if (allRequiredFilled2()) {
+            $(".datosTipoMoneda").show();
+        } else {
+            $(".datosTipoMoneda").hide();
+        }
+    });
+});
+     
+</script>
+</body>
+</html>
