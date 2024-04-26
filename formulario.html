@@ -19,6 +19,9 @@
     ></script>
     <title>Gallery</title>
 
+    
+  </head>
+
     <style>
         .colorBordesAzul{
             border: 3px solid blue;
@@ -28,9 +31,8 @@
             background: blue;
             color: white;
         }
-     
+ 
     </style>
-  </head>
 
   <body>
     
@@ -42,75 +44,63 @@
     <div class="comprovantes">
         <div class="datosBoleta comprovante">
             <div class="form-floating my-1">
-                <input type="text" class="form-control DNI_CE" id="floatingInput" placeholder="DNI / CE" data-acepta-numeros="true" maxlength="8" minlength="8" require>
-                <label for="floatingInput">DNI / CE</label>
+                <input type="text" class="form-control dniceBoleta" id="dniceBoleta" name="dniceBoleta" placeholder="DNI / CE" maxlength="8" minlength="8" require>
+                <label for="dniceBoleta">DNI / CE</label>
             </div>
             
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="NOMBRE COMPLETO" data-acepta-letras="true" minlength="3" require>
-                <label for="floatingInput">NOMBRE COMPLETO</label>
+                <input type="text" class="form-control" id="nombreBoleta" name="nombreBoleta" placeholder="NOMBRE COMPLETO"  minlength="3" require>
+                <label for="nombreBoleta">NOMBRE COMPLETO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="TELÉFONO PARA SU ENTREGA" data-acepta-numeros="true" maxlength="9" minlength="8" require>
-                <label for="floatingInput">TELÉFONO PARA SU ENTREGA</label>
+                <input type="text" class="form-control" id="telefonoBoleta" name="telefonoBoleta" placeholder="TELÉFONO PARA SU ENTREGA" maxlength="9" minlength="8" require>
+                <label for="telefonoBoleta">TELÉFONO PARA SU ENTREGA</label>
             </div>
             <div class="form-floating my-1">
-                <input type="email" class="form-control" id="floatingInput" placeholder="CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO" require>
-                <label for="floatingInput">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
+                <input type="email" class="form-control" id="correoBoleta" name="correoBoleta" placeholder="CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO" require>
+                <label for="correoBoleta">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="password" class="form-control" id="floatingInput" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" data-acepta-numeros="true" maxlength="4" minlength="4" require>
-                <label for="floatingInput">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
-            </div>
-
-            <label class="checkbox-inline">
-                <input type="checkbox" name="tipo" id="checkboxTercero"> Asignar a un tercero para la entrega
-            </label>
-
-            <div class="datosTercero" style="display: none;">
-                <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="DNI / CE TERCERO" data-acepta-numeros="true" maxlength="8" minlength="8" require>
-                    <label for="floatingInput">DNI / CE TERCERO</label>
-                </div>
-                <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="NOMBRE COMPLETO TERCERO" data-acepta-letras="true" minlength="3" require>
-                    <label for="floatingInput">NOMBRE COMPLETO TERCERO</label>
-                </div>
-                <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" data-acepta-numeros="true" maxlength="9" minlength="9" require>
-                    <label for="floatingInput">TELÉFONO PARA SU ENTREGA TERCERO</label>
-                </div>
+                <input type="password" class="form-control" id="claveBoleta" name="claveBoleta" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4" require>
+                <label for="claveBoleta">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
             </div>
         </div>
 
         <div class="datosFactura comprovante">
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="RUC" maxlength="11">
-                <label for="floatingInput">RUC</label>
+                <input type="text" class="form-control" id="rucFaactura" name="rucFaactura" placeholder="RUC" maxlength="11">
+                <label for="rucFaactura">RUC</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="RAZÓN SOCIAL" minlength="3">
-                <label for="floatingInput">RAZÓN SOCIAL</label>
+                <input type="text" class="form-control" id="rasonsocialFactura" name="rasonsocialFactura" placeholder="RAZÓN SOCIAL" minlength="3">
+                <label for="rasonsocialFactura">RAZÓN SOCIAL</label>
             </div>
             <div class="form-floating my-1">
-                <input type="email" class="form-control" id="floatingInput" placeholder="CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO">
-                <label for="floatingInput">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
+                <input type="email" class="form-control" id="correoFactura" name="correoFactura" placeholder="CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO">
+                <label for="correoFactura">CORREO ELECTRÓNICO PARA SU COMPROBANTE DE PAGO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4">
-                <label for="floatingInput">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
+                <input type="text" class="form-control" id="claveFactura" name="claveFactura" placeholder="CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA" maxlength="4" minlength="4">
+                <label for="claveFactura">CREA CLAVE SECRETA DE 4 DÍGITOS PARA SU ENTREGA</label>
+            </div>
+        </div>
+
+        <label class="checkbox-inline">
+            <input type="checkbox" name="tipo" id="checkboxTercero"> Asignar a un tercero para la entrega
+        </label>
+
+        <div class="datosTercero" style="display: none;">
+            <div class="form-floating my-1">
+                <input type="text" class="form-control" id="dniTercero" name="dniTercero" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8" require>
+                <label for="dniTercero">DNI / CE TERCERO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="DNI / CE TERCERO" maxlength="8" minlength="8">
-                <label for="floatingInput">DNI / CE TERCERO</label>
+                <input type="text" class="form-control" id="nombreTercero" name="nombreTercero" placeholder="NOMBRE COMPLETO TERCERO" minlength="3" require>
+                <label for="nombreTercero">NOMBRE COMPLETO TERCERO</label>
             </div>
             <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="NOMBRE COMPLETO TERCERO" minlength="3">
-                <label for="floatingInput">NOMBRE COMPLETO TERCERO</label>
-            </div>
-            <div class="form-floating my-1">
-                <input type="text" class="form-control" id="floatingInput" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9">
-                <label for="floatingInput">TELÉFONO PARA SU ENTREGA TERCERO</label>
+                <input type="text" class="form-control" id="telefonoTercero" name="telefonoTercero" placeholder="TELÉFONO PARA SU ENTREGA TERCERO" maxlength="9" minlength="9" require>
+                <label for="telefonoTercero">TELÉFONO PARA SU ENTREGA TERCERO</label>
             </div>
         </div>
     </div>
@@ -132,74 +122,76 @@
             <div class="deliveryLima">
                 <p>Dirección de Entrega</p>
                 <div class="form-floating my-1">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>DISTRITO</option>
-                    <option value="SAN ISIDRO">SAN ISIDRO</option>
-                    <option value="MIRAFLORES">MIRAFLORES</option>
-                    <option value="BARRANCO">BARRANCO</option>
-                    <option value="SANTIAGO DE SURCO (SURCO)">SANTIAGO DE SURCO (SURCO)</option>
-                    <option value="SAN BORJA">SAN BORJA</option>
-                    <option value="SAN LUIS">SAN LUIS</option>
-                    <option value="JESÚS MARÍA">JESÚS MARÍA</option>
-                    <option value="MAGDALENA DEL MAR">MAGDALENA DEL MAR</option>
-                    <option value="LA MOLINA">LA MOLINA</option>
-                    <option value="LINCE">LINCE</option>
-                    <option value="PUEBLO LIBRE">PUEBLO LIBRE</option>
-                    <option value="SAN MIGUEL">SAN MIGUEL</option>
-                    <option value="BREÑA">BREÑA</option>
-                    <option value="LA VICTORIA">LA VICTORIA</option>
-                    <option value="RÍMAC">RÍMAC</option>
-                    <option value="CHORRILLOS">CHORRILLOS</option>
-                    <option value="VILLA MARÍA DEL TRIUNFO">VILLA MARÍA DEL TRIUNFO</option>
-                    <option value="VILLA EL SALVADOR">VILLA EL SALVADOR</option>
-                    <option value="SAN JUAN DE MIRAFLORES">SAN JUAN DE MIRAFLORES</option>
-                    <option value="ATE">ATE</option>
-                    <option value="SANTA ANITA">SANTA ANITA</option>
-                    <option value="CALLAO">CALLAO</option>
+                    <select class="form-select" id="selecDistritoLima" name="selecDistritoLima" aria-label="Floating label select example">
+                        <option selected>DISTRITO</option>
+                        <option value="SAN ISIDRO">SAN ISIDRO</option>
+                        <option value="MIRAFLORES">MIRAFLORES</option>
+                        <option value="BARRANCO">BARRANCO</option>
+                        <option value="SANTIAGO DE SURCO (SURCO)">SANTIAGO DE SURCO (SURCO)</option>
+                        <option value="SAN BORJA">SAN BORJA</option>
                     </select>
-                    <label for="floatingSelect">SELECCIONAR DISTRITO DE LIMA</label>
+                    <label for="selecDistritoLima">SELECCIONAR DISTRITO DE LIMA</label>
                 </div>
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="DIGITE SU DIRECCIÓN DE ENTREGA">
-                    <label for="floatingInput">DIGITE SU DIRECCIÓN DE ENTREGA</label>
+                    <input type="text" class="form-control" id="direccionLima" name="direccionLima" placeholder="DIGITE SU DIRECCIÓN DE ENTREGA">
+                    <label for="direccionLima">DIGITE SU DIRECCIÓN DE ENTREGA</label>
                 </div>
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="REFERENCIA DEL LUGAR DE ENTREGA">
-                    <label for="floatingInput">REFERENCIA DEL LUGAR DE ENTREGA</label>
+                    <input type="text" class="form-control" id="referencialima" name="referencialima" placeholder="REFERENCIA DEL LUGAR DE ENTREGA">
+                    <label for="referencialima">REFERENCIA DEL LUGAR DE ENTREGA</label>
                 </div>
             </div>
+
             <div class="emvioProvincia">
                 <p>Dirección de Envío</p>
                 <div class="form-floating my-1">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>DEPARTAMENTOS</option>
-                    <label for="floatingSelect">SELECCIONAR DEPARTAMENTO</label>
+                    <select class="form-select" id="departamentoProv" name="departamentoProv" aria-label="Floating label select example">
+                        <option selected>DEPARTAMENTOS</option>
+                        <option value="VILLA MARÍA DEL TRIUNFO">VILLA MARÍA DEL TRIUNFO</option>
+                        <option value="VILLA EL SALVADOR">VILLA EL SALVADOR</option>
+                        <option value="SAN JUAN DE MIRAFLORES">SAN JUAN DE MIRAFLORES</option>
+                        <option value="ATE">ATE</option>
+                        <option value="SANTA ANITA">SANTA ANITA</option>
+                        <option value="CALLAO">CALLAO</option>
+                        <label for="departamentoProv">SELECCIONAR DEPARTAMENTO</label>
+                    </select>
                 </div>
                 <div class="form-floating my-1">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>SELECCIONAR PROVINCIA</option>
-                    <label for="floatingSelect">SELECCIONAR PROVINCIA</label>
+                    <select class="form-select" id="provinviaProv" name="provinviaProv" aria-label="Floating label select example">
+                        <option selected>SELECCIONAR PROVINCIA</option>
+                        <option value="LINCE">LINCE</option>
+                        <option value="PUEBLO LIBRE">PUEBLO LIBRE</option>
+                        <option value="SAN MIGUEL">SAN MIGUEL</option>
+                        <option value="BREÑA">BREÑA</option>
+                        <option value="LA VICTORIA">LA VICTORIA</option>
+                        <option value="RÍMAC">RÍMAC</option>
+                        <option value="CHORRILLOS">CHORRILLOS</option>
+                    </select>
+                    <label for="provinviaProv">SELECCIONAR PROVINCIA</label>
                 </div>
                 <div class="form-floating my-1">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>SELECCIONAR DISTRITO</option>
-                    <label for="floatingSelect">SELECCIONAR DISTRITO</label>
+                    <select class="form-select" id="distritoProv" name="distritoProv" aria-label="Floating label select example">
+                        <option selected>SELECCIONAR DISTRITO</option>
+                        <option value="SAN LUIS">SAN LUIS</option>
+                        <option value="JESÚS MARÍA">JESÚS MARÍA</option>
+                        <option value="MAGDALENA DEL MAR">MAGDALENA DEL MAR</option>
+                        <option value="LA MOLINA">LA MOLINA</option>
+                    </select>
+                    <label for="distritoProv">SELECCIONAR DISTRITO</label>
                 </div>
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="DIGITE SU DIRECCIÓN DE ENTREGA">
-                    <label for="floatingInput">DIGITE SU DIRECCIÓN DE ENTREGA</label>
+                    <input type="text" class="form-control" id="direccionProv" name="direccionProv" placeholder="DIGITE SU DIRECCIÓN DE ENTREGA">
+                    <label for="direccionProv">DIGITE SU DIRECCIÓN DE ENTREGA</label>
                 </div>
                 <div class="form-floating my-1">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="REFERENCIA DEL LUGAR DE ENTREGA">
-                    <label for="floatingInput">REFERENCIA DEL LUGAR DE ENTREGA</label>
+                    <input type="text" class="form-control" id="referenciaProv" name="referenciaProv" placeholder="REFERENCIA DEL LUGAR DE ENTREGA">
+                    <label for="referenciaProv">REFERENCIA DEL LUGAR DE ENTREGA</label>
                 </div>
                 <p>Seleccionar su agencia de envío</p>
                 <label class="checkbox-inline">
                     <input type="checkbox" name="tipo" id="ajencia"> ajencia
                 </label>
-
             </div>
-            
         </div>
     </div>
     <div class="datosTipoMoneda" style="display: none;">
@@ -209,207 +201,178 @@
             <div class="colorBordesAzul mx-auto px-5 btn">DÓLARES ($)</div>
         </div>
         <p>Método de Pago:</p>
-        <div class="form-floating my-1">
-            <input type="text" class="form-control" id="form_solonum" placeholder="N° de Tarjeta">
-            <label for="floatingInput">N° de Tarjeta</label>
-        </div>
-        <div class="form-floating my-1">
-            <input type="date" class="form-control" id="form_solonum" placeholder="MM/YY">
-            <label for="floatingInput">MM/YY</label>
-        </div>
-        <div class="form-floating my-1">
-            <input type="text" class="form-control" id="form_solonum" placeholder="CVV">
-            <label for="floatingInput">CVV</label>
-        </div>
-        <div class="form-floating my-1">
-            <input type="text" class="form-control" id="floatingInput" placeholder="pago unico">
-            <label for="floatingInput">single payment</label>
-        </div>
-        <div class="form-floating my-1">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Pago sin aplazamiento">
-            <label for="floatingInput">Pago sin aplazamiento</label>
-        </div>
         <button class="colorBackgroundAzulHover mx-auto px-5 btn">pagar S/ $cantidad</button>
     </div>
 </form>
 
 
 <script>
-  $(document).ready(function() {
-    $(".datosFactura").hide();
-    $(".datosTercero").hide();
-    $(".datosEnvioProducto").hide();
-    $(".deliveryLima").hide();
-    $(".emvioProvincia").hide();
-    $(".datosTipoMoneda").hide();
-
-    $("#btnBoleta").click(function() {
-        $("#btnBoleta").addClass("activeFormCompra")
-        $("#btnFactura").removeClass("activeFormCompra")
-
-        $(".datosBoleta").show();
+var core = {
+    init: function() {
+        // Ocultar elementos al cargar la página
         $(".datosFactura").hide();
-        $(".datosEnvioProducto").hide(); 
+        $(".datosTercero").hide();
+        $(".datosEnvioProducto").hide();
+        $(".deliveryLima").hide();
+        $(".emvioProvincia").hide();
+        $(".datosTipoMoneda").hide();
 
-        $(".datosBoleta input").attr("required", true);
-        $(".datosFactura input").attr("required", false);
-        $(".datosTercero input").attr("required", false); 
-    });
+        // Manejar clic en el botón Boleta
+        $("#btnBoleta").click(function() {
+            $("#btnBoleta").addClass("activeFormCompra")
+            $("#btnFactura").removeClass("activeFormCompra")
 
-    $("#btnFactura").click(function() {
-        $("#btnFactura").addClass("activeFormCompra")
-        $("#btnBoleta").removeClass("activeFormCompra")
+            $(".datosBoleta").show();
+            $(".datosFactura").hide();
+            $(".datosEnvioProducto").hide(); 
 
-        $(".datosBoleta").hide();
-        $(".datosFactura").show();
-        $(".datosEnvioProducto").hide(); 
-
-        $(".datosFactura input").attr("required", true);
-        $(".datosBoleta input").attr("required", false);
-        $(".datosTercero input").attr("required", false); 
-    });
-
-    $("#checkboxTercero").change(function() {
-        if ($(this).is(':checked')) {
-            $(".datosTercero").show();
-            $(".datosTercero input").attr("required", true); 
-        } else {
-            $(".datosTercero").hide();
+            $(".datosBoleta input").attr("required", true);
+            $(".datosFactura input").attr("required", false);
             $(".datosTercero input").attr("required", false); 
-        }
-    });
+        });
 
-    function allRequiredFilled() {
-        var allFilled = true;
+        // Manejar clic en el botón Factura
+        $("#btnFactura").click(function() {
+            $("#btnFactura").addClass("activeFormCompra")
+            $("#btnBoleta").removeClass("activeFormCompra")
 
-        var currentSection = $(".datosBoleta").is(":visible") ? ".datosBoleta" : ".datosFactura";
-        $(currentSection + " input[required]").each(function() {
-            if ($(this).val() === "") {
-                allFilled = false;
-                return false; 
+            $(".datosBoleta").hide();
+            $(".datosFactura").show();
+            $(".datosEnvioProducto").hide(); 
+
+            $(".datosFactura input").attr("required", true);
+            $(".datosBoleta input").attr("required", false);
+            $(".datosTercero input").attr("required", false); 
+        });
+
+        // Manejar cambio en el checkbox de Tercero
+        $("#checkboxTercero").change(function() {
+            if ($(this).is(':checked')) {
+                $(".datosTercero").show();
+                $(".datosTercero input").attr("required", true); 
+            } else {
+                $(".datosTercero").hide();
+                $(".datosTercero input").attr("required", false); 
             }
         });
 
-        if ($("#checkboxTercero").is(':checked')) {
-            $(".datosTercero input[required]").each(function() {
+        // Función para comprobar si todos los campos requeridos están llenos
+        function allRequiredFilled() {
+            var allFilled = true;
+
+            var currentSection = $(".datosBoleta").is(":visible") ? ".datosBoleta" : ".datosFactura";
+            $(currentSection + " input[required]").each(function() {
                 if ($(this).val() === "") {
                     allFilled = false;
                     return false; 
                 }
             });
-        }
 
-        return allFilled;
-    }
-    $(document).on("change keyup", "input[required]", function() {
-        if (allRequiredFilled()) {
-            $(".datosEnvioProducto").show(); 
-        } else {
-            $(".datosEnvioProducto").hide(); 
-        }
-    });
-
-
-    
-
-    $("#btnRecojDirec").click(function() {
-        $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
-        $(this).addClass("activeFormCompra");
-        $(".datosTipoMoneda").hide();
-
-        $(".datosEnvioProducto .obsionRecojoProd > div").hide();
-        $(".datosEnvioProducto .recojoTienda").show(); 
-
-        $(".recojoTienda input").attr("required", true);
-        $(".deliveryLima input").attr("required", false);
-        $(".emvioProvincia input").attr("required", false); 
-    });
-    $("#btnDelLima").click(function() {
-        $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
-        $(this).addClass("activeFormCompra");
-        $(".datosTipoMoneda").hide();
-
-        $(".datosEnvioProducto .obsionRecojoProd > div").hide();
-        $(".datosEnvioProducto .deliveryLima").show(); 
-
-        $(".deliveryLima input").attr("required", true);
-        $(".emvioProvincia input").attr("required", false);
-        $(".recojoTienda input").attr("required", false); 
-    });
-    $("#btnEnvProvin").click(function() {
-        $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
-        $(this).addClass("activeFormCompra");
-        $(".datosTipoMoneda").hide();
-
-        $(".datosEnvioProducto .obsionRecojoProd > div").hide();
-        $(".datosEnvioProducto .emvioProvincia").show(); 
-
-        $(".emvioProvincia input").attr("required", true);
-        $(".deliveryLima input").attr("required", false);
-        $(".recojoTienda input").attr("required", false); 
-    });
-
-    function allRequiredFilled2(){
-        var allFilled = true;
-
-        var currentSection = $(".datosEnvioProducto .btn.activeFormCompra").attr("id");
-        switch (currentSection) {
-            case "btnRecojDirec":
-                $(currentSection + " ~ .recojoTienda input[required]").each(function() {
-                    if ($(this).val() === "") {
-                        allFilled = false;
-                        return false;
-                    }
-                });
-                if (!$("#AceptarDireccion").is(':checked')) {
-                    allFilled = false;
-                }
-                break;
-            case "btnDelLima":
-                $(currentSection + " ~ .deliveryLima input[required]").each(function() {
+            if ($("#checkboxTercero").is(':checked')) {
+                $(".datosTercero input[required]").each(function() {
                     if ($(this).val() === "") {
                         allFilled = false;
                         return false; 
                     }
                 });
-                break;
-            case "btnEnvProvin":
-                $(currentSection + " ~ .emvioProvincia input[required]").each(function() {
-                    if ($(this).val() === "") {
-                        allFilled = false;
-                        return false; 
-                    }
-                });
-                break;
+            }
+
+            return allFilled;
         }
-        if ($("#checkboxTercero").is(':checked')) {
-            $(".datosTercero input[required]").each(function() {
-                if ($(this).val() === "") {
-                    allFilled = false;
-                    return false; 
-                }
-            });
-        }
-        
-        return allFilled;
-    }
-    $(document).on("change keyup", "input[required]", function() {
-        if (allRequiredFilled2()) {
-            $(".datosTipoMoneda").show();
-        } else {
+
+        // Manejar cambio y escritura en campos requeridos
+        $(document).on("change keyup", "input[required]", function() {
+            if (allRequiredFilled()) {
+                $(".datosEnvioProducto").show(); 
+            } else {
+                $(".datosEnvioProducto").hide(); 
+            }
+        });
+
+        // Manejar clic en los botones de opciones de envío
+        $("#btnRecojDirec, #btnDelLima, #btnEnvProvin").click(function() {
+            $(".datosEnvioProducto .btn").removeClass("activeFormCompra");
+            $(this).addClass("activeFormCompra");
             $(".datosTipoMoneda").hide();
-        }
-        $("input[required]").trigger("change");
-    });
-});
-$(document).ready(function() {
-    // Agregar clase a campos que aceptan solo números
-    $("input[type='text'][data-acepta-numeros='true']").addClass("soloNumeros");
 
-    // Agregar clase a campos que aceptan solo letras
-    $("input[type='text'][data-acepta-letras='true']").addClass("soloLetras");
+            $(".datosEnvioProducto .obsionRecojoProd > div").hide();
+            $("." + $(this).data("target")).show(); 
+
+            $("." + $(this).data("target") + " input").attr("required", true);
+            $(".datosEnvioProducto .btn").not($(this)).each(function() {
+                $("." + $(this).data("target") + " input").attr("required", false);
+            });
+        });
+
+        // Función para comprobar si todos los campos requeridos del envío están llenos
+        function allRequiredFilled2(){
+            var allFilled = true;
+
+            var currentSection = $(".datosEnvioProducto .btn.activeFormCompra").attr("id");
+            switch (currentSection) {
+                case "btnRecojDirec":
+                    $(".recojoTienda input[required]").each(function() {
+                        if ($(this).val() === "") {
+                            allFilled = false;
+                            return false;
+                        }
+                    });
+                    if (!$("#AceptarDireccion").is(':checked')) {
+                        allFilled = false;
+                    }
+                    break;
+                case "btnDelLima":
+                    $(".deliveryLima input[required]").each(function() {
+                        if ($(this).val() === "") {
+                            allFilled = false;
+                            return false; 
+                        }
+                    });
+                    break;
+                case "btnEnvProvin":
+                    $(".emvioProvincia input[required]").each(function() {
+                        if ($(this).val() === "") {
+                            allFilled = false;
+                            return false; 
+                        }
+                    });
+                    break;
+            }
+            if ($("#checkboxTercero").is(':checked')) {
+                $(".datosTercero input[required]").each(function() {
+                    if ($(this).val() === "") {
+                        allFilled = false;
+                        return false; 
+                    }
+                });
+            }
+            
+            return allFilled;
+        }
+
+        // Manejar cambio y escritura en campos requeridos del envío
+        $(document).on("change keyup", "input[required]", function() {
+            if (allRequiredFilled2()) {
+                $(".datosTipoMoneda").show();
+            } else {
+                $(".datosTipoMoneda").hide();
+            }
+            $("input[required]").trigger("change");
+        });
+
+        // Agregar clase a campos que aceptan solo números
+        $("input[type='text'][data-acepta-numeros='true']").addClass("soloNumeros");
+
+        // Agregar clase a campos que aceptan solo letras
+        $("input[type='text'][data-acepta-letras='true']").addClass("soloLetras");
+    }
+};
+
+// Inicializar el objeto core
+$(document).ready(function() {
+    core.init();
 });
-     
+
 </script>
 </body>
 </html>
